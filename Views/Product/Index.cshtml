@@ -1,0 +1,28 @@
+﻿@model List<Products>
+@*
+<table class="table">
+	<tr>
+		<td>Urun ID</td>
+		<td>Urun Adı</td>
+		<td>Fiyat</td>
+		<td>Stock</td>
+	</tr>
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>
+				@item.ProductId
+			</td>
+			<td>
+				@item.ProductName
+			</td>
+			<td>
+				@item.UnitPrice
+			</td>
+			<td>
+				@item.UnitsInStock
+			</td>
+		</tr>
+	}
+</table>*@
+@Html.Partial("_ProductList",Model)
